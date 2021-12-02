@@ -30,15 +30,42 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Login",
-  components: {
-    Layout: Layout
-  },
   data: function data() {
     return {
       password: null,
-      phone: null,
+      email: null,
       errors: [],
       loader: false
     };
@@ -120,7 +147,82 @@ var render = function () {
           )
         : _vm._e(),
       _vm._v(" "),
-      _vm._m(0),
+      _c("div", { staticClass: "card-body" }, [
+        _c(
+          "form",
+          {
+            on: {
+              submit: function ($event) {
+                $event.preventDefault()
+                return _vm.login()
+              },
+            },
+          },
+          [
+            _c("div", { staticClass: "input-group mb-3" }, [
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.email,
+                    expression: "email",
+                  },
+                ],
+                staticClass: "form-control",
+                attrs: {
+                  type: "text",
+                  placeholder: "email",
+                  autocomplete: "off",
+                },
+                domProps: { value: _vm.email },
+                on: {
+                  input: function ($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.email = $event.target.value
+                  },
+                },
+              }),
+              _vm._v(" "),
+              _vm._m(0),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "input-group mb-3" }, [
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.password,
+                    expression: "password",
+                  },
+                ],
+                staticClass: "form-control",
+                attrs: {
+                  type: "password",
+                  placeholder: "Password",
+                  autocomplete: "off",
+                },
+                domProps: { value: _vm.password },
+                on: {
+                  input: function ($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.password = $event.target.value
+                  },
+                },
+              }),
+              _vm._v(" "),
+              _vm._m(1),
+            ]),
+            _vm._v(" "),
+            _vm._m(2),
+          ]
+        ),
+      ]),
     ]),
   ])
 }
@@ -129,19 +231,48 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "card-body" }, [
-      _c("h5", { staticClass: "card-title" }, [
-        _vm._v("Special title treatment"),
+    return _c("div", { staticClass: "input-group-append" }, [
+      _c("div", { staticClass: "input-group-text" }, [
+        _c("span", { staticClass: "fas fa-envelope" }),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "input-group-append" }, [
+      _c("div", { staticClass: "input-group-text" }, [
+        _c("span", { staticClass: "fas fa-lock" }),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "col-8" }, [
+        _c("div", { staticClass: "icheck-primary" }, [
+          _c("input", { attrs: { type: "checkbox", id: "remember" } }),
+          _vm._v(" "),
+          _c("label", { attrs: { for: "remember" } }, [
+            _vm._v(
+              "\n                                Remember Me\n                            "
+            ),
+          ]),
+        ]),
       ]),
       _vm._v(" "),
-      _c("p", { staticClass: "card-text" }, [
-        _vm._v(
-          "With supporting text below as a natural lead-in to additional content."
+      _c("div", { staticClass: "col-4" }, [
+        _c(
+          "button",
+          {
+            staticClass: "btn btn-primary btn-block btn-flat",
+            attrs: { type: "submit" },
+          },
+          [_vm._v("login")]
         ),
-      ]),
-      _vm._v(" "),
-      _c("a", { staticClass: "btn btn-primary", attrs: { href: "#" } }, [
-        _vm._v("Go somewhere"),
       ]),
     ])
   },
