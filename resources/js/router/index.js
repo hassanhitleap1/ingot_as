@@ -38,6 +38,14 @@ const route =  new VueRouter({
             component:  ()=>import("../views/clients/Edit"),
             meta: {requiresAuth: true}
         },
+        
+        {
+            path: '/transactions',
+            name: 'transactions',
+            component: ()=>import("../views/transactions/Index"),
+            meta: {requiresAuth: true}
+
+        },
         {
             path: '/login',
             name: 'login',
