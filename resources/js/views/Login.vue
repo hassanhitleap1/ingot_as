@@ -63,7 +63,7 @@ export default {
     methods: {
         login() {
             this.loader=true;
-            axios.post('api/auth/login', {phone:this.phone,password:this.password}).then((response) => {
+            axios.post('api/auth/login', {email:this.email,password:this.password}).then((response) => {
                 localStorage.setItem('token', response.data.access_token)
                 localStorage.setItem('token_type', response.data.token_type)
                 localStorage.setItem('expires_in', response.data.expires_in)

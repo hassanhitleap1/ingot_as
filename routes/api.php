@@ -7,3 +7,5 @@ Route::group(['prefix' => 'auth' ], function () {
     Route::post('me', 'AuthJwt\AuthController@me');
     Route::post('registration','AuthJwt\AuthController@registration');
 });
+
+Route::apiResource('clients',\Users\ClientController::class);

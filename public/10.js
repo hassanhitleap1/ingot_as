@@ -1,4 +1,4 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[5],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[10],{
 
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/clients/Edit.vue?vue&type=script&lang=js&":
 /*!******************************************************************************************************************************************************************!*\
@@ -9,7 +9,7 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-!(function webpackMissingModule() { var e = new Error("Cannot find module '../../services/clients'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+/* harmony import */ var _services_clients__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../services/clients */ "./resources/js/services/clients.js");
 //
 //
 //
@@ -79,7 +79,7 @@ __webpack_require__.r(__webpack_exports__);
     var _this = this;
 
     this.id = this.$route.params.id;
-    !(function webpackMissingModule() { var e = new Error("Cannot find module '../../services/clients'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())(this.id).then(function (response) {
+    _services_clients__WEBPACK_IMPORTED_MODULE_1__["get_one"](this.id).then(function (response) {
       _this.client = response.data.data;
     })["catch"](function (error) {
       console.log("error", error);
@@ -89,7 +89,7 @@ __webpack_require__.r(__webpack_exports__);
     update_admin: function update_admin() {
       var _this2 = this;
 
-      !(function webpackMissingModule() { var e = new Error("Cannot find module '../../services/clients'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())(this.client, this.id).then(function (response) {
+      _services_clients__WEBPACK_IMPORTED_MODULE_1__["update"](this.client, this.id).then(function (response) {
         _this2.errors = [];
         _this2.success = true;
 

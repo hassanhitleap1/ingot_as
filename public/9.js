@@ -1,4 +1,4 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[4],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[9],{
 
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/clients/Create.vue?vue&type=script&lang=js&":
 /*!********************************************************************************************************************************************************************!*\
@@ -9,7 +9,7 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-!(function webpackMissingModule() { var e = new Error("Cannot find module '../../services/clients'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+/* harmony import */ var _services_clients__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../services/clients */ "./resources/js/services/clients.js");
 //
 //
 //
@@ -85,7 +85,7 @@ __webpack_require__.r(__webpack_exports__);
     create: function create() {
       var _this = this;
 
-      !(function webpackMissingModule() { var e = new Error("Cannot find module '../../services/clients'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())(this.client).then(function (response) {
+      _services_clients__WEBPACK_IMPORTED_MODULE_1__["create"](this.client).then(function (response) {
         _this.success = true;
 
         _this.$router.push({
